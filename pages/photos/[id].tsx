@@ -4,7 +4,7 @@ import {AdaptiveValue, Rem} from "../../styles/functions/mixins";
 import {useAppDispatch, useTypedSelector} from "../../app/store/ReduxStore";
 import {setCurrentPage, setCurrentPhoto, toggleIsSlideShow} from '../../app/store/PhotosSlice';
 import {useRouter} from "next/router";
-import {BiArrowFromLeft, BiLeftArrow, BiRightArrow} from "react-icons/Bi";
+import {BiLeftArrow, BiRightArrow} from "react-icons/Bi";
 
 type ImagePageType = {}
 

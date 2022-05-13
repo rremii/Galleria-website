@@ -1,8 +1,7 @@
-import React, {FC, useEffect, useMemo, useRef, useState} from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 import styled, {skeletonLoading} from "styled-components";
 import {useAppDispatch, useTypedSelector} from "../../../store/ReduxStore";
-import {fetchPhotos, setCurrentPage, setCurrentPhoto} from "../../../store/PhotosSlice";
-import {photosAPI} from "../../../api/api";
+import {setCurrentPage, setCurrentPhoto} from "../../../store/PhotosSlice";
 import {useRouter} from "next/router";
 
 

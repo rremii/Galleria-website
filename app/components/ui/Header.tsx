@@ -2,7 +2,7 @@ import React, {FC, useEffect} from 'react';
 import styled from "styled-components";
 import Image from 'next/image'
 import logo from '../../assets/logo.svg'
-import {AdaptiveValue, Rem} from '../../../styles/functions/mixins'
+import {Rem} from '../../../styles/functions/mixins'
 import {useRouter} from "next/router";
 import {useAppDispatch, useTypedSelector} from "../../store/ReduxStore";
 import {fetchPhotos, setCurrentPage, setCurrentPhoto, toggleIsSlideShow} from "../../store/PhotosSlice";

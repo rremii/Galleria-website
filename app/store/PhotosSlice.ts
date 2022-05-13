@@ -1,7 +1,6 @@
 import {photosAPI} from "../api/api";
 import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit"
 import {IcurrentPhoto, Iphoto} from "./types";
-import {number} from "prop-types";
 
 export const fetchPhotos = createAsyncThunk(
     'PhotosSlice/fetchPhotos',
