@@ -4,7 +4,7 @@ import {AdaptiveValue, Rem} from "../../styles/functions/mixins";
 import {useAppDispatch, useTypedSelector} from "../../app/store/ReduxStore";
 import {setCurrentPage, setCurrentPhoto, toggleIsSlideShow} from '../../app/store/PhotosSlice';
 import {useRouter} from "next/router";
-// import {BiLeftArrow, BiRightArrow} from "react-icons/all";
+import {BiLeftArrow, BiRightArrow} from "react-icons/all";
 
 type ImagePageType = {}
 
@@ -58,15 +58,9 @@ const ImagePage: FC<ImagePageType> = () => {
                     </div>
                 </div>
                 <div className="controls-cont">
-                    {/*<BiLeftArrow className='arrow' onClick={() => {*/}
-                    {/*    SetCurrentPhoto(currentPhoto.PhotoId - 1)*/}
-                    {/*    dispatch(toggleIsSlideShow(false))*/}
-                    {/*}}/>*/}
-                    {/*—*/}
-                    {/*<BiRightArrow className='arrow' onClick={() => {*/}
-                    {/*    SetCurrentPhoto(currentPhoto.PhotoId + 1)*/}
-                    {/*    dispatch(toggleIsSlideShow(false))*/}
-                    {/*}}/>*/}
+                    <BiLeftArrow/>
+                    —
+                    <BiRightArrow/>
 
                 </div>
             </div>
