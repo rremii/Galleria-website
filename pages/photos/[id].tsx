@@ -58,9 +58,15 @@ const ImagePage: FC<ImagePageType> = () => {
                     </div>
                 </div>
                 <div className="controls-cont">
-                    <BiLeftArrow/>
+                    <img src='https://cdn-icons-png.flaticon.com/512/271/271220.png' className='arrow' onClick={() => {
+                        SetCurrentPhoto(currentPhoto.PhotoId - 1)
+                        dispatch(toggleIsSlideShow(false))
+                    }}/>
                     —
-                    <BiRightArrow/>
+                    <img src='https://cdn-icons-png.flaticon.com/512/54/54833.png' className='arrow' onClick={() => {
+                        SetCurrentPhoto(currentPhoto.PhotoId + 1)
+                        dispatch(toggleIsSlideShow(false))
+                    }}/>
 
                 </div>
             </div>

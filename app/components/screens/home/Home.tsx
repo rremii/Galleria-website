@@ -167,7 +167,6 @@ const HomeWrapper = styled.div<skeletonLoading>`
       margin: 0;
       height: min-content;
 
-
       .card-cont {
         width: 100%;
         display: flex;
