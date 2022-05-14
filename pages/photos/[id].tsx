@@ -4,7 +4,10 @@ import {AdaptiveValue, Rem} from "../../styles/functions/mixins";
 import {useAppDispatch, useTypedSelector} from "../../app/store/ReduxStore";
 import {setCurrentPage, setCurrentPhoto, toggleIsSlideShow} from '../../app/store/PhotosSlice';
 import {useRouter} from "next/router";
-import {BiLeftArrow, BiRightArrow} from "react-icons/all";
+import caretRight from '../../app/assets/caret-right-solid.svg'
+import caretLeft from '../../app/assets/caret-left-solid.svg'
+import logo from "../../app/assets/logo.svg";
+import Image from "next/image";
 
 type ImagePageType = {}
 
@@ -58,12 +61,12 @@ const ImagePage: FC<ImagePageType> = () => {
                     </div>
                 </div>
                 <div className="controls-cont">
-                    <img src='https://cdn-icons-png.flaticon.com/512/271/271220.png' className='arrow' onClick={() => {
+                    <Image src={caretLeft} className='arrow' onClick={() => {
                         SetCurrentPhoto(currentPhoto.PhotoId - 1)
                         dispatch(toggleIsSlideShow(false))
                     }}/>
                     —
-                    <img src='https://cdn-icons-png.flaticon.com/512/54/54833.png' className='arrow' onClick={() => {
+                    <Image src={caretRight} className='arrow' onClick={() => {
                         SetCurrentPhoto(currentPhoto.PhotoId + 1)
                         dispatch(toggleIsSlideShow(false))
                     }}/>
@@ -161,10 +164,14 @@ const ImagePageWrapper = styled.div`
         display: flex;
         align-items: center;
 
-        .arrow {
+        img {
           cursor: pointer;
-          ${AdaptiveValue("width", 50, 30)};
-          ${AdaptiveValue("height", 50, 30)};
+          width: 50px !important;
+          height: 50px !important;
+          @media screen and (max-width: 600px) {
+            width: 30px !important;
+            height: 30px !important;
+          }
         }
       }
     }
